@@ -9,6 +9,13 @@ class App extends Component {
       error: '',
     }
   }
+  componentDidMount = () => {
+    //get request
+  }
+  createCards = () => {
+    //check if cards. if cards, make cards. else make loading page
+  }
+  
   render() {
     return (
       <div className="App">
