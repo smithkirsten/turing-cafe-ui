@@ -4,10 +4,10 @@ import './Reservation.css';
 const Reservation = ({ reservation }) => {
   return (
     <article className='res-card'>
-      <p>{reservation.name}</p>
-      <p>{reservation.date}</p>
-      <p>{reservation.time}</p>
-      <p>Number of guests: {reservation.number}</p>
+      <p className='deets name'>{reservation.name}</p>
+      <p className='deets'>{reservation.date}</p>
+      <p className='deets'>{reservation.time}</p>
+      <p className='deets'>Number of guests: {reservation.number}</p>
     </article>
     )
 }

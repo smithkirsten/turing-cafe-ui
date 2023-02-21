@@ -17,3 +17,18 @@
   font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
+
+button {
+  background-color: teal;
+  color: beige;
+}
+
+.resy-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+}

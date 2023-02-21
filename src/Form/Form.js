@@ -17,6 +17,7 @@ class Form extends Component {
   }
 
   handleClick = ({ handleSubmit }) => {
+    console.log('clicked!', this.state)
     handleSubmit(this.state)
   }
   //time and date are types of inputs
