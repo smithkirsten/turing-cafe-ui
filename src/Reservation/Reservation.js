@@ -1,9 +1,14 @@
 import React from 'react';
 import './Reservation.css';
 
-const Reservation = () => {
+const Reservation = ({ reservation }) => {
   return (
-    <p>boop</p>
+    <article className='res-card'>
+      <p>{reservation.name}</p>
+      <p>{reservation.date}</p>
+      <p>{reservation.time}</p>
+      <p>Number of guests: {reservation.number}</p>
+    </article>
     )
 }
 
