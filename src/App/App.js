@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({ reservations: data.reservations }) 
   }
   createCards = () => {
-    
+    return this.state.reservations.map(reservation => <Reservation reservation={reservation}/>)
   }
 
   determineRender = () => {
