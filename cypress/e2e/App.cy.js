@@ -25,6 +25,10 @@ describe('Landing page', () => {
     cy.get('#time').type('7:00').should('have.value', '7:00')
     cy.get('#number').type('4').should('have.value', '4')
     
-    cy.get()
+    cy.get('.submit-button').click()
+    cy.get('.resy-container').contains('Bruce')
+    cy.get('.resy-container').contains('02/21')
+    cy.get('.resy-container').contains('7:00')
+    cy.get('.resy-container').contains('4')
   })
 })
