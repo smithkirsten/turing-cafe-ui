@@ -12,8 +12,7 @@ class Form extends Component {
     }
   }
   handleChange = (target) => {
-    console.log('this is changing!')
-    this.setState({ [target.name]: target.value }, console.log(this.state))
+    this.setState({ [target.name]: target.value })
   }
 
   handleClick = (event, props) => {
