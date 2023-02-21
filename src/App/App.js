@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { getReservations } from '../apiCalls';
 import Form from '../Form/Form';
 import Reservation from '../Reservation/Reservation';
 
