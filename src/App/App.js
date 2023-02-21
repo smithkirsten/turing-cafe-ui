@@ -15,7 +15,17 @@ class App extends Component {
   createCards = () => {
     //check if cards. if cards, make cards. else make loading page
   }
-  
+
+  determineRender = () => {
+    if (this.state.error) {
+      return <p>Whoops! Something went wrong. Try again later</p>
+    }
+    if (this.reservations.length) {
+      return this.createCards()
+    }
+    return <p>loading...</p>
+  }
+
   render() {
     return (
       <div className="App">
@@ -24,7 +34,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          {this.determineRender()}
         </div>
       </div>
     )
