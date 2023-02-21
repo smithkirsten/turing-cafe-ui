@@ -17,17 +17,17 @@ class App extends Component {
     console.log(data)
     data.error ? 
       this.setState({ error: data.error }) :
-      this.setState({ reservations: data.reservations }) 
+      this.setState({ reservations: data }) 
   }
   createCards = () => {
-    return this.state.reservations.map(reservation => <Reservation reservation={reservation}/>)
+    return this.state.reservations.map(reservation => <Reservation key={reservation.id} reservation={reservation}/>)
   }
 
   determineRender = () => {
     if (this.state.error) {
       return <p>Whoops! Something went wrong. Try again later</p>
     }
-    if (this.state.reservations.length) {
+    if (this.state.reservations) {
       return this.createCards()
     }
     return <p>loading...</p>
