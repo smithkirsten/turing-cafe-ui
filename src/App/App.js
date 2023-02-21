@@ -20,7 +20,7 @@ class App extends Component {
       this.setState({ reservations: data }) 
   }
   createCards = () => {
-    return this.state.reservations.map(reservation => <Reservation key={reservation.id} id={reservation.id} reservation={reservation} handleCancel={this.handleCancel}/>)
+    return this.state.reservations.map(reservation => <Reservation key={reservation.id} reservation={reservation} handleCancel={this.handleCancel}/>)
   }
 
   determineRender = () => {

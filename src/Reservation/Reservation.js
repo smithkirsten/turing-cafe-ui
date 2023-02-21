@@ -3,7 +3,7 @@ import './Reservation.css';
 
 const Reservation = ({ reservation, handleCancel }) => {
   return (
-    <article className='res-card'>
+    <article id={reservation.id} className='res-card'>
       <p className='deets name'>{reservation.name}</p>
       <p className='deets'>{reservation.date}</p>
       <p className='deets'>{reservation.time}</p>
