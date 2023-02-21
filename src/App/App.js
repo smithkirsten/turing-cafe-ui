@@ -33,8 +33,10 @@ class App extends Component {
     return <p>loading...</p>
   }
 
-  handleClick = () => {
-
+  handleSubmit = (inputs) => {
+    this.setState((prevState) => {
+      return { reservations: [...prevState.reservations, inputs ]}
+    })
   }
 
   render() {
