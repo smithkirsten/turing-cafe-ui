@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
+import Reservation from '../Reservation/Reservation';
 
 class App extends Component {
   constructor () {
