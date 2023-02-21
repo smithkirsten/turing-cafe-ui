@@ -23,13 +23,13 @@ class Form extends Component {
   render() {
     return (<form>
       <label htmlFor="name" className="hidden">Name</label>
-        <input name='name' value={this.state.name} onChange={(event) => this.handleChange(event.target)} placeholder="name" type='text' />
+        <input name='name' id='name' value={this.state.name} onChange={(event) => this.handleChange(event.target)} placeholder="name" type='text' />
       <label htmlFor="date" className="hidden">Date</label>
-        <input name='date' value={this.state.date} onChange={(event) => this.handleChange(event.target)} placeholder="date(mm/dd)" type='text' />
+        <input name='date' id='date' value={this.state.date} onChange={(event) => this.handleChange(event.target)} placeholder="date(mm/dd)" type='text' />
       <label htmlFor="time" className="hidden">Time</label>
-        <input name='time' value={this.state.time} onChange={(event) => this.handleChange(event.target)} placeholder="time" type='text' />
+        <input name='time' id='time' value={this.state.time} onChange={(event) => this.handleChange(event.target)} placeholder="time" type='text' />
       <label htmlFor='number' className="hidden">Number of Guests</label>
-        <input name='number' value={this.state.number} onChange={(event) => this.handleChange(event.target)} placeholder="number of guests" type='number' />
+        <input name='number' id='number' value={this.state.number} onChange={(event) => this.handleChange(event.target)} placeholder="number of guests" type='number' />
       <button className='submit-button' type='submit' onClick={(event) => this.handleClick(event, this.props)}>Make Reservation</button> 
     </form>)
   }
