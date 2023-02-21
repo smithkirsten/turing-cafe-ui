@@ -11,8 +11,9 @@ class Form extends Component {
       guests: ''
     }
   }
-  handleChange = () => {
-    
+  handleChange = (target) => {
+    console.log('this is changing!')
+    this.setState({ [target.name]: target.value }, console.log(this.state))
   }
   //time and date are types of inputs
   render() {
