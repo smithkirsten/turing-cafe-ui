@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       name: '',
@@ -16,8 +16,8 @@ class Form extends Component {
     this.setState({ [target.name]: target.value }, console.log(this.state))
   }
 
-  handleClick = () => {
-    //use props function to make post request
+  handleClick = ({ handleSubmit }) => {
+    handleSubmit(this.state)
   }
   //time and date are types of inputs
   render() {
