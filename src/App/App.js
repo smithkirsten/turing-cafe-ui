@@ -12,11 +12,15 @@ class App extends Component {
       error: '',
     }
   }
-  componentDidMount = () => {
-    //get request
+  componentDidMount = async() => {
+    const data = await getReservations()
+    console.log(data)
+    data.error ? 
+      this.setState({ error: data.error }) :
+      this.setState({ reservations: data.reservations }) 
   }
   createCards = () => {
-    //create reservation cards
+    
   }
 
   determineRender = () => {
