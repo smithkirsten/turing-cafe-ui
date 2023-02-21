@@ -11,13 +11,18 @@ class Form extends Component {
       guests: ''
     }
   }
-  
+
   handleChange = () => {
 
   }
-
+  //time and date are types of inputs
   render = () => {
-
+    return (<form>
+      <input name='name' type='text' />
+      <input name='date' type='text' />
+      <input name='time' type='text' />
+      <input name='guests' type='number' />
+    </form>)
   }
 }
 
