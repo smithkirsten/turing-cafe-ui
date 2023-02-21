@@ -5,7 +5,7 @@ import Reservation from '../Reservation/Reservation';
 
 class App extends Component {
   constructor () {
-    super(),
+    super();
     this.state = {
       reservations: [],
       error: '',
@@ -22,10 +22,14 @@ class App extends Component {
     if (this.state.error) {
       return <p>Whoops! Something went wrong. Try again later</p>
     }
-    if (this.reservations.length) {
+    if (this.state.reservations.length) {
       return this.createCards()
     }
     return <p>loading...</p>
+  }
+
+  handleClick = () => {
+
   }
 
   render() {

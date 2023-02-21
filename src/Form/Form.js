@@ -2,21 +2,14 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor () {
-    super(),
+  constructor() {
+    super();
     this.state = {
-      name: '',
-      date: '',
-      time: '',
-      guests: ''
+
     }
   }
-
-  handleChange = () => {
-
-  }
   //time and date are types of inputs
-  render = () => {
+  render() {
     return (<form>
       <input name='name' type='text' />
       <input name='date' type='text' />
