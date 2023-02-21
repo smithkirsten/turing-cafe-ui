@@ -1,10 +1,11 @@
 .res-card {
-  background-color: beige;
+  background-color: whitesmoke;
   color: teal;
   text-align: center;
   border-radius: 3px;
   border: teal solid 3px;
   padding: 10px;
+  margin: 5px;
 }
 
 .deets {
