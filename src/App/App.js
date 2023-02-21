@@ -34,12 +34,14 @@ class App extends Component {
   }
 
   handleSubmit = (inputs) => {
+    const newRes = {...inputs, id: Date.now()}
     this.setState((prevState) => {
-      return { reservations: [...prevState.reservations, inputs ]}
+      return { reservations: [...prevState.reservations, newRes ]}
     })
   }
 
   handleCancel = (id) => {
+    console.log(`this would delete the card ${id}`)
     //delete card based on id
   }
 
@@ -48,7 +50,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form handleSubmit={this.handleSubmit}/>
         </div>
         <div className='resy-container'>
           {this.determineRender()}

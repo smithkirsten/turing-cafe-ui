@@ -8,7 +8,7 @@ const Reservation = ({ reservation, handleCancel }) => {
       <p className='deets'>{reservation.date}</p>
       <p className='deets'>{reservation.time}</p>
       <p className='deets'>Number of guests: {reservation.number}</p>
-      <button onClick={handleCancel(reservation.id)}>cancel</button>
+      <button onClick={() => handleCancel(reservation.id)}>cancel</button>
     </article>
     )
 }

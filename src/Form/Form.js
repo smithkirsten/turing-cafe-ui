@@ -16,9 +16,9 @@ class Form extends Component {
     this.setState({ [target.name]: target.value }, console.log(this.state))
   }
 
-  handleClick = ({ handleSubmit }) => {
-    console.log('clicked!', this.state)
-    handleSubmit(this.state)
+  handleClick = (event, props) => {
+    event.preventDefault();
+    props.handleSubmit(this.state)
   }
   //time and date are types of inputs
   render() {
@@ -31,7 +31,7 @@ class Form extends Component {
         <input name='time' value={this.state.time} onChange={(event) => this.handleChange(event.target)} placeholder="time" type='text' />
       <label htmlFor='number' className="hidden">Number of Guests</label>
         <input name='number' value={this.state.number} onChange={(event) => this.handleChange(event.target)} placeholder="number of guests" type='number' />
-      <button className='submit-button' type='submit' onClick={this.handleClick}>Make Reservation</button> 
+      <button className='submit-button' type='submit' onClick={(event) => this.handleClick(event, this.props)}>Make Reservation</button> 
     </form>)
   }
 }
